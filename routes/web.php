@@ -18,3 +18,4 @@ Route::get('/', function () {
 
 
 Route::get('hello', 'BlogController@create');
+Route::get('dashboard', 'DashboardController@index');
