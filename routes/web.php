@@ -11,11 +11,20 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 
 
-Route::get('hello', 'BlogController@create');
+// Route::get('hello', 'BlogController@create');
 Route::get('dashboard', 'DashboardController@index');
+
+Route::get('create-category', 'CategoryController@create');
+
+Route::get('all-categories', 'CategoryController@index');
+Route::get('edit-category/{id}', 'CategoryController@edit');
+Route::get('delete-category/{id}', 'CategoryController@destroy');
+Route::post('update-category/{id}', 'CategoryController@update');
+
+Route::post('post-category-form', 'CategoryController@store');
