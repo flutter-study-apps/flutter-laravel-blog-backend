@@ -17,7 +17,7 @@ class CreateBlogPostsTable extends Migration
             $table->bigIncrements('id');
             $table->string('title');
             $table->longText('details');
-            $table->string('featured_imge_url');
+            $table->string('featured_image_url')->nullable();
             $table->integer('category_id');
             $table->integer('user_id');
             $table->timestamps();
